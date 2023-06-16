@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    {% block title %}
+    <title>DUMMY PAGE</title>
+    {% endblock %}    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    
+</head>
+ 
+
+<body><H1>THIS IS DUMMY TABLE YOU SHOULD SEE EVERY THING IN DUMMY PAGE</H1>
+    <img src="vk.jpg" alt="">
+   <nav class="nav">
+    <a href="{% url  'home'  %}" class="nav-link">HOME</a>
+    <a href="{% url  'register'  %}" class="nav-link">register</a>
+    <a href="{% url  'login'  %}" class="nav-link">login</a>
+   </nav>
+   
+    <script src="{% static 'js/bootstrap.js' %}"></script> 
+    <script src="{% static 'js/jquery.js' %}"></script> 
+    <script src="{% static 'js/mdb.js' %}"></script> 
+    <script src="{% static 'js/popper.js' %}"></script> 
+    {% block body_block %}
+    {% endblock %}
+</body>
+</html>
